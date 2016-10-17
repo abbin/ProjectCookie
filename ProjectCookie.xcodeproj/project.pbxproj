@@ -13,6 +13,10 @@
 		EDC3065A1DB4E8AB008E4B8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDC306581DB4E8AB008E4B8A /* Main.storyboard */; };
 		EDC3065C1DB4E8AB008E4B8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EDC3065B1DB4E8AB008E4B8A /* Assets.xcassets */; };
 		EDC3065F1DB4E8AB008E4B8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDC3065D1DB4E8AB008E4B8A /* LaunchScreen.storyboard */; };
+		EDC306681DB4E93C008E4B8A /* PCManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EDC306671DB4E93C008E4B8A /* PCManager.m */; };
+		EDC3066B1DB4E9BA008E4B8A /* PCAppLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDC3066A1DB4E9BA008E4B8A /* PCAppLocationViewController.m */; };
+		EDC3066D1DB4EA97008E4B8A /* IMG_0102.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = EDC3066C1DB4EA97008E4B8A /* IMG_0102.mp4 */; };
+		EDC306711DB4F847008E4B8A /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDC306701DB4F847008E4B8A /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +30,13 @@
 		EDC3065B1DB4E8AB008E4B8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EDC3065E1DB4E8AB008E4B8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EDC306601DB4E8AB008E4B8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EDC306661DB4E93C008E4B8A /* PCManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCManager.h; sourceTree = "<group>"; };
+		EDC306671DB4E93C008E4B8A /* PCManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCManager.m; sourceTree = "<group>"; };
+		EDC306691DB4E9BA008E4B8A /* PCAppLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCAppLocationViewController.h; sourceTree = "<group>"; };
+		EDC3066A1DB4E9BA008E4B8A /* PCAppLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCAppLocationViewController.m; sourceTree = "<group>"; };
+		EDC3066C1DB4EA97008E4B8A /* IMG_0102.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = IMG_0102.mp4; sourceTree = "<group>"; };
+		EDC3066E1DB4F83A008E4B8A /* ProjectCookie.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ProjectCookie.entitlements; sourceTree = "<group>"; };
+		EDC306701DB4F847008E4B8A /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDC306711DB4F847008E4B8A /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,6 +56,7 @@
 			children = (
 				EDC3064E1DB4E8AB008E4B8A /* ProjectCookie */,
 				EDC3064D1DB4E8AB008E4B8A /* Products */,
+				EDC3066F1DB4F847008E4B8A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,14 +71,20 @@
 		EDC3064E1DB4E8AB008E4B8A /* ProjectCookie */ = {
 			isa = PBXGroup;
 			children = (
+				EDC3066E1DB4F83A008E4B8A /* ProjectCookie.entitlements */,
 				EDC306521DB4E8AB008E4B8A /* AppDelegate.h */,
 				EDC306531DB4E8AB008E4B8A /* AppDelegate.m */,
+				EDC306661DB4E93C008E4B8A /* PCManager.h */,
+				EDC306671DB4E93C008E4B8A /* PCManager.m */,
 				EDC306551DB4E8AB008E4B8A /* ViewController.h */,
 				EDC306561DB4E8AB008E4B8A /* ViewController.m */,
+				EDC306691DB4E9BA008E4B8A /* PCAppLocationViewController.h */,
+				EDC3066A1DB4E9BA008E4B8A /* PCAppLocationViewController.m */,
 				EDC306581DB4E8AB008E4B8A /* Main.storyboard */,
 				EDC3065B1DB4E8AB008E4B8A /* Assets.xcassets */,
 				EDC3065D1DB4E8AB008E4B8A /* LaunchScreen.storyboard */,
 				EDC306601DB4E8AB008E4B8A /* Info.plist */,
+				EDC3066C1DB4EA97008E4B8A /* IMG_0102.mp4 */,
 				EDC3064F1DB4E8AB008E4B8A /* Supporting Files */,
 			);
 			path = ProjectCookie;
@@ -77,6 +96,14 @@
 				EDC306501DB4E8AB008E4B8A /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EDC3066F1DB4F847008E4B8A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EDC306701DB4F847008E4B8A /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,6 +139,14 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = EDXP6Y48QS;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -140,6 +175,7 @@
 			files = (
 				EDC3065F1DB4E8AB008E4B8A /* LaunchScreen.storyboard in Resources */,
 				EDC3065C1DB4E8AB008E4B8A /* Assets.xcassets in Resources */,
+				EDC3066D1DB4EA97008E4B8A /* IMG_0102.mp4 in Resources */,
 				EDC3065A1DB4E8AB008E4B8A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,8 +187,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDC306681DB4E93C008E4B8A /* PCManager.m in Sources */,
 				EDC306571DB4E8AB008E4B8A /* ViewController.m in Sources */,
 				EDC306541DB4E8AB008E4B8A /* AppDelegate.m in Sources */,
+				EDC3066B1DB4E9BA008E4B8A /* PCAppLocationViewController.m in Sources */,
 				EDC306511DB4E8AB008E4B8A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -271,8 +309,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ProjectCookie/ProjectCookie.entitlements;
 				DEVELOPMENT_TEAM = EDXP6Y48QS;
 				INFOPLIST_FILE = ProjectCookie/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.abbinvarghese.ProjectCookie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -283,8 +323,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = ProjectCookie/ProjectCookie.entitlements;
 				DEVELOPMENT_TEAM = EDXP6Y48QS;
 				INFOPLIST_FILE = ProjectCookie/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.abbinvarghese.ProjectCookie;
 				PRODUCT_NAME = "$(TARGET_NAME)";

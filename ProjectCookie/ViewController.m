@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import <CloudKit/CloudKit.h>
+#import "PCManager.h"
 
 @interface ViewController ()
 
@@ -23,6 +25,18 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    if (![PCManager isLocationSet]) {
+        CKContainer *myContainer = [CKContainer defaultContainer];
+        [myContainer fetchUserRecordIDWithCompletionHandler:^(CKRecordID * _Nullable recordID, NSError * _Nullable error) {
+            [[myContainer publicCloudDatabase] fetchRecordWithID:recordID completionHandler:^(CKRecord * _Nullable record, NSError * _Nullable error) {
+                
+            }];
+        }];
+    }
 }
 
 
