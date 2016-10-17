@@ -8,13 +8,24 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import <CloudKit/CloudKit.h>
 
-FOUNDATION_EXPORT NSString *const kBPAppLocation;
+FOUNDATION_EXPORT NSString *const kPCAppLocation;
+FOUNDATION_EXPORT NSString *const kPCUserName;
+FOUNDATION_EXPORT NSString *const kPCUserImage;
 
 @interface PCManager : NSObject
+
+@property (nonatomic, strong) CKRecord *currectUser;
 
 +(BOOL)isLocationSet;
 
 +(UIColor*)mainColor;
+
++ (instancetype)sharedManager;
+
++ (void)initUser;
+
++(void)updateUser;
 
 @end

@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -138,5 +139,82 @@
             </objects>
             <point key="canvasLocation" x="685.60000000000002" y="35.532233883058474"/>
         </scene>
+        <!--User Profile View Controller-->
+        <scene sceneID="sxg-4s-fYL">
+            <objects>
+                <viewController storyboardIdentifier="PCUserProfileViewController" id="UTz-0E-BhF" customClass="PCUserProfileViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UCM-n4-f03"/>
+                        <viewControllerLayoutGuide type="bottom" id="JBF-Pz-WC3"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="AWR-eC-dZ0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's your name?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zs-Qx-9Ta">
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="type your name here" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Voz-WA-o5k">
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="zkS-gG-Y0H">
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="9Vh-ic-8cn"/>
+                                    <constraint firstAttribute="width" constant="50" id="mQZ-IM-5Fy"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="9vs-Dd-kx2" appends="YES" id="DH1-os-ZCk"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zkS-gG-Y0H" firstAttribute="top" secondItem="4zs-Qx-9Ta" secondAttribute="bottom" constant="8" id="1BY-7V-4ed"/>
+                            <constraint firstItem="4zs-Qx-9Ta" firstAttribute="top" secondItem="UCM-n4-f03" secondAttribute="bottom" constant="50" id="Aj4-47-vES"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Voz-WA-o5k" secondAttribute="trailing" constant="8" id="Ibc-mb-JJv"/>
+                            <constraint firstItem="4zs-Qx-9Ta" firstAttribute="leading" secondItem="AWR-eC-dZ0" secondAttribute="leadingMargin" id="Lyr-9a-Pu0"/>
+                            <constraint firstItem="zkS-gG-Y0H" firstAttribute="leading" secondItem="AWR-eC-dZ0" secondAttribute="leadingMargin" id="XIg-Cu-Foh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="4zs-Qx-9Ta" secondAttribute="trailing" id="Yhf-OB-Yej"/>
+                            <constraint firstItem="Voz-WA-o5k" firstAttribute="leading" secondItem="zkS-gG-Y0H" secondAttribute="trailing" constant="8" id="ZLj-Oh-vAu"/>
+                            <constraint firstItem="Voz-WA-o5k" firstAttribute="height" secondItem="zkS-gG-Y0H" secondAttribute="height" id="Zjp-Sc-wLg"/>
+                            <constraint firstItem="Voz-WA-o5k" firstAttribute="top" secondItem="4zs-Qx-9Ta" secondAttribute="bottom" constant="8" id="auP-Vy-baL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="avatarImageView" destination="zkS-gG-Y0H" id="uKC-Na-FiG"/>
+                        <outlet property="nameTextField" destination="Voz-WA-o5k" id="OrT-lU-oT9"/>
+                        <outlet property="toolBar" destination="siX-dE-Rsy" id="wQ2-Jk-Omt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WIz-KX-zNh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="siX-dE-Rsy">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <items>
+                        <barButtonItem style="plain" systemItem="flexibleSpace" id="Wua-DF-dmG"/>
+                        <barButtonItem title="Done" id="W6z-j0-1D2">
+                            <connections>
+                                <action selector="doneButtonClicked:" destination="UTz-0E-BhF" id="O6x-Oi-4HN"/>
+                            </connections>
+                        </barButtonItem>
+                    </items>
+                    <color key="barTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </toolbar>
+                <tapGestureRecognizer id="9vs-Dd-kx2">
+                    <connections>
+                        <action selector="didTapOnImage:" destination="UTz-0E-BhF" id="Udh-Ln-7pu"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1354" y="36"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="avatar" width="50" height="50"/>
+    </resources>
 </document>

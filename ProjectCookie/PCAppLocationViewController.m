@@ -19,6 +19,8 @@
 @property (nonatomic, strong) CLLocationManager *locationManager;
 @property (nonatomic, assign) BOOL firstUpdateFinished;
 
+@property (nonatomic, strong) void(^completionHandler)();
+
 @end
 
 @implementation PCAppLocationViewController
@@ -126,8 +128,9 @@
         [geocoder reverseGeocodeLocation:currentLocation completionHandler:^(NSArray *placemarks, NSError *error) {
             if (error == nil && [placemarks count] > 0) {
                 CLPlacemark *placemark = [placemarks lastObject];
-                [[NSUserDefaults standardUserDefaults] setObject:placemark.addressDictionary forKey:kBPAppLocation];
-                [[NSUserDefaults standardUserDefaults] synchronize];
+//                [[NSUserDefaults standardUserDefaults] setObject:placemark.addressDictionary forKey:kPCAppLocation];
+//                [[NSUserDefaults standardUserDefaults] synchronize];
+                _completionHandler();
             } else {
                 NSLog(@"%@", error.debugDescription);
             }
@@ -137,6 +140,10 @@
 
 - (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
     
+}
+
+-(void)completionHandler:(void(^)(void))handler;{
+    _completionHandler = handler;
 }
 
 

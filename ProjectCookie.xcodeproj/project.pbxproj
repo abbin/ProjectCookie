@@ -17,6 +17,7 @@
 		EDC3066B1DB4E9BA008E4B8A /* PCAppLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDC3066A1DB4E9BA008E4B8A /* PCAppLocationViewController.m */; };
 		EDC3066D1DB4EA97008E4B8A /* IMG_0102.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = EDC3066C1DB4EA97008E4B8A /* IMG_0102.mp4 */; };
 		EDC306711DB4F847008E4B8A /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EDC306701DB4F847008E4B8A /* CloudKit.framework */; };
+		EDC306741DB5008D008E4B8A /* PCUserProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDC306731DB5008D008E4B8A /* PCUserProfileViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,8 @@
 		EDC3066C1DB4EA97008E4B8A /* IMG_0102.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = IMG_0102.mp4; sourceTree = "<group>"; };
 		EDC3066E1DB4F83A008E4B8A /* ProjectCookie.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ProjectCookie.entitlements; sourceTree = "<group>"; };
 		EDC306701DB4F847008E4B8A /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		EDC306721DB5008D008E4B8A /* PCUserProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PCUserProfileViewController.h; sourceTree = "<group>"; };
+		EDC306731DB5008D008E4B8A /* PCUserProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PCUserProfileViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +83,8 @@
 				EDC306561DB4E8AB008E4B8A /* ViewController.m */,
 				EDC306691DB4E9BA008E4B8A /* PCAppLocationViewController.h */,
 				EDC3066A1DB4E9BA008E4B8A /* PCAppLocationViewController.m */,
+				EDC306721DB5008D008E4B8A /* PCUserProfileViewController.h */,
+				EDC306731DB5008D008E4B8A /* PCUserProfileViewController.m */,
 				EDC306581DB4E8AB008E4B8A /* Main.storyboard */,
 				EDC3065B1DB4E8AB008E4B8A /* Assets.xcassets */,
 				EDC3065D1DB4E8AB008E4B8A /* LaunchScreen.storyboard */,
@@ -191,6 +196,7 @@
 				EDC306571DB4E8AB008E4B8A /* ViewController.m in Sources */,
 				EDC306541DB4E8AB008E4B8A /* AppDelegate.m in Sources */,
 				EDC3066B1DB4E9BA008E4B8A /* PCAppLocationViewController.m in Sources */,
+				EDC306741DB5008D008E4B8A /* PCUserProfileViewController.m in Sources */,
 				EDC306511DB4E8AB008E4B8A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

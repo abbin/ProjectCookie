@@ -9,6 +9,8 @@
 #import "ViewController.h"
 #import <CloudKit/CloudKit.h>
 #import "PCManager.h"
+#import "PCAppLocationViewController.h"
+#import "PCUserProfileViewController.h"
 
 @interface ViewController ()
 
@@ -30,13 +32,25 @@
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
     if (![PCManager isLocationSet]) {
-        CKContainer *myContainer = [CKContainer defaultContainer];
-        [myContainer fetchUserRecordIDWithCompletionHandler:^(CKRecordID * _Nullable recordID, NSError * _Nullable error) {
-            [[myContainer publicCloudDatabase] fetchRecordWithID:recordID completionHandler:^(CKRecord * _Nullable record, NSError * _Nullable error) {
+        PCAppLocationViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"PCAppLocationViewController"];
+        [vc completionHandler:^{
+            PCUserProfileViewController *vc2 = [self.storyboard instantiateViewControllerWithIdentifier:@"PCUserProfileViewController"];
+            [vc2 completionHandler:^{
                 
             }];
+            [vc.navigationController pushViewController:vc2 animated:YES];
         }];
+        
+        UINavigationController *nav = [[UINavigationController alloc]initWithRootViewController:vc];
+        nav.modalTransitionStyle         = UIModalTransitionStyleCrossDissolve;
+        nav.modalPresentationStyle       = UIModalPresentationOverCurrentContext;
+        [nav setNavigationBarHidden:YES];
+        [self presentViewController:nav animated:YES completion:nil];
     }
+}
+
+-(BOOL)prefersStatusBarHidden{
+    return YES;
 }
 
 

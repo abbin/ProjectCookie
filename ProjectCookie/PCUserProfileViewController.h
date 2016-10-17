@@ -1,5 +1,5 @@
 //
-//  PCAppLocationViewController.h
+//  PCUserProfileViewController.h
 //  ProjectCookie
 //
 //  Created by Abbin Varghese on 17/10/16.
@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PCAppLocationViewController : UIViewController
+@interface PCUserProfileViewController : UIViewController
 
 -(void)completionHandler:(void(^)(void))handler;
 
